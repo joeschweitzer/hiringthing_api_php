@@ -156,6 +156,24 @@ class HiringThingJob extends HiringThingObject {
 
     return $data;
   }
+  
+  /**
+   * Creates a new application for this job
+   *
+   * @param array $applicationData An associative array containing the application data
+   * you wish to create (must contain at least first name, last name, phone, and email).
+   *
+   * @returns Associative array of response (will contain success => true) if application
+   * was created successfully.
+   */
+  public function createApplication($applicationData) {
+    $path = "jobs/{$this->id}/applications";
+    $headers = array('Content-Type' => 'application/json');
+    
+    $data = $this->requester->request($path, json_encode($applicationData), 'POST', $headers);
+    
+    return $data;
+  }
 }
 
 /**
