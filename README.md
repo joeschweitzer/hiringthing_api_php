@@ -64,7 +64,7 @@ $myjob->getApplications('rated');
 $myjob->getApplications('archived');
 
 // create new application for this job
-$myjob->createApplication(array('first_name' => 'John', 'last_name' => 'Doe', 'phone' => '703-123-4567', 'email' => 'john.doe@example.com'))
+$myjob->createApplication(array('first_name' => 'John', 'last_name' => 'Doe', 'phone' => '703-123-4567', 'email' => 'john.doe@example.com'));
 
 // get a specific application 
 $myapplication = $hiringthing->getApplication(111);
