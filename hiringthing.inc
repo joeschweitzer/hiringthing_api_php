@@ -104,7 +104,7 @@ class HiringThing {
   public function getJob($id) {
     $path = "jobs/$id";
     $data = $this->requester->request($path);
-    return new HiringThingJob($this->requester, $data);
+    return new HiringThingJob($this->requester, $data[0]);
   }
 
   /**
